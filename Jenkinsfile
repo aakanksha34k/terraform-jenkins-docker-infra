@@ -55,8 +55,8 @@ pipeline {
         stage('Verify Container') {
             when { expression { params.ACTION == 'apply' } }
             steps {
-                sh 'docker ps -a --filter name=hello-from-terraform'
-                sh 'docker logs hello-from-terraform'
+                sh 'docker ps -a --filter name=hello-v2'
+                sh 'docker logs hello-v2'
             }
         }
 

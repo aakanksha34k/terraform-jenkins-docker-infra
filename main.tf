@@ -14,7 +14,7 @@ resource "docker_image" "hello" {
 }
 
 resource "docker_container" "hello" {
-  name = "hello-from-terraform"
+  name = "hello-v2"
   image = docker_image.hello.image_id
 
   must_run = false
