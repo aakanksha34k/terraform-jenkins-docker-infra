@@ -7,7 +7,9 @@ terraform {
   }
 }
 
-provider "docker" {}
+provider "docker" {
+  host = "ssh://user@node01"
+}
 
 resource "docker_image" "hello" {
   name = "hello-world:latest"
